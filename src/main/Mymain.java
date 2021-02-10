@@ -11,5 +11,8 @@ public class Mymain{
         linkedList.addFirst(200);
         linkedList.traverse();
         System.out.println("size = "+ linkedList.size());
+        linkedList.addAfterGivenNode(500,34);
+        linkedList.traverse();
+        System.out.println(linkedList.last());
     }
 }

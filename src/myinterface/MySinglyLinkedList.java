@@ -18,6 +18,7 @@ public interface MySinglyLinkedList {
     int removeLast();
     int removeGivenNode(int givenElement);
     boolean searchElement(int element);
-
+    int firtst();
+    int last();
 
 }

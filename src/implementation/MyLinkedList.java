@@ -21,7 +21,17 @@ public class MyLinkedList implements MySinglyLinkedList {
     public int size(){
         return size;
     }
+
     @Override
+    public void addLast(int element) {
+
+    }
+
+    @Override
+    public void addLastWithoutUsingTail(int element) {
+
+    }
+
     public boolean isEmpty(){
         return head == null;
     }
@@ -54,5 +64,82 @@ public class MyLinkedList implements MySinglyLinkedList {
         else {
             System.out.println("LInked list empty");
         }
+    }
+
+    @Override
+    public void addAfterGivenNode(int givenElement, int element) {
+        Node node = new Node(element);
+        if (!isEmpty()) {
+            // 1) not needed
+            if (head == head){
+                if (head.getData() == givenElement){
+                    head.setNext(node);
+                    tail = node;
+                    size++;
+                }
+                else {
+                    System.out.println("givenElement not found in list");
+                }
+        }
+            else {
+                Node temp = head;
+                while (temp != null && temp.getData() != givenElement){
+                    temp = temp.getNext();
+                }
+                if (temp != null){
+                    //case 2
+                    node.setNext(temp.getNext());
+                    temp.setNext(node);
+                    size++;
+                    if (temp == tail){
+                        tail = node;
+                    }
+                }
+                else {
+                    System.out.println("givenElement not found in list");
+                }
+            }
+
+        }
+        else {
+            System.out.println("empty list");
+        }
+
+
+    }
+
+    @Override
+    public int removeFirst() {
+        return 0;
+    }
+
+    @Override
+    public int removeLast() {
+        return 0;
+    }
+
+    @Override
+    public int removeGivenNode(int givenElement) {
+        return 0;
+    }
+
+    @Override
+    public boolean searchElement(int element) {
+        return false;
+    }
+    @Override
+    public int first() {
+        if(!isEmpty()){
+            return head.getData();
+        }
+        return 0;
+    }
+
+    @Override
+    public int last() {
+        if(!isEmpty()){
+            return tail.getData();
+        }
+        return 0;
     }
 }
