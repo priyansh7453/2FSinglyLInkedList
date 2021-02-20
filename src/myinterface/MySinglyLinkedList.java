@@ -7,8 +7,8 @@ public interface MySinglyLinkedList {
     //insertAtEnd
     //insertAtTail
     //void addLast(int element);
-    boolean isEmpty();  // will give treu if linked List is empty
-    int size();  //will give totalnumber of element in linked list
+    boolean isEmpty();  // will give true  if linked List is empty
+    int size();  //will give total number of element in linked list
     void addLast(int element);
     void addLastWithoutUsingTail(int element);
     void traverse();
@@ -18,7 +18,7 @@ public interface MySinglyLinkedList {
     int removeLast();
     int removeGivenNode(int givenElement);
     boolean searchElement(int element);
-    int firtst();
+    int first();
     int last();
 
 }
