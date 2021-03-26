@@ -14,5 +14,7 @@ public class Mymain{
         linkedList.addAfterGivenNode(500,34);
         linkedList.traverse();
         System.out.println(linkedList.last());
+        linkedList.addLast(34);
+        linkedList.traverse();
     }
 }

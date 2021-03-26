@@ -24,7 +24,17 @@ public class MyLinkedList implements MySinglyLinkedList {
 
     @Override
     public void addLast(int element) {
-
+        Node node = new Node(element);
+        if (isEmpty()){
+            head = node;
+            tail = node;
+            size++;
+        }
+        else{
+            tail.setNext(node);
+            tail = node;
+            size++;
+        }
     }
 
     @Override
